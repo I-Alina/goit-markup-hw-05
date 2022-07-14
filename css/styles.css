@@ -314,6 +314,29 @@ header {
 .img-item:not(:nth-child(3n)) {
     margin-right: 30px;
 }
+.img-slogan {
+    
+    position: relative;
+
+
+}
+.slogan-text {
+    display: flex;
+    width: 370px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    color: var(--local-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}
 /*----------MAIN-ASIDE-------------*/
 .aside .container {
     margin-left: auto;
@@ -665,23 +688,22 @@ header {
     border-radius: 4px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .modal-close-btn {
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
-    right: 10px;
-    top: 10px;
     width: 30px;
     height: 30px;
-
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    top: 10px;
     border-radius: 50%;
-
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--local-color);
 }
 .is-hidden{
     opacity: 0;
@@ -689,5 +711,10 @@ header {
     pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%) scale(0);
+}
+.icon-modal-close {
+    width: 11px;
+    height: 11px;
+    fill: #000000;
 }
